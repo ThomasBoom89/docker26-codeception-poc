@@ -1,0 +1,27 @@
+{
+    "name": "thomasboom89/docker26-codeception-poc",
+    "autoload": {
+        "psr-4": {
+            "Thomas\\TestCodeception\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "8.3.*"
+    },
+    "require-dev": {
+        "codeception/codeception": "^5.1",
+        "php-webdriver/webdriver": "^1.1",
+        "codeception/module-webdriver": "^4.0",
+        "codeception/module-phpbrowser": "*",
+        "codeception/module-asserts": "^3.0"
+    },
+    "scripts": {
+        "install": "composer install",
+        "test": "/vendor/bin/codecept run"
+    }
+}

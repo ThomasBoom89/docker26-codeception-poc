@@ -1,0 +1,15 @@
+services:
+  apache:
+    container_name: apache-test
+    build:
+      context: .
+    ports:
+      - "8800:80"
+    volumes:
+      - ./public:/var/www/html
+      - ./tests:/tests
+      - ./composer.json:/composer.json
+      - ./composer.lock:/composer.lock
+      - ./codeception.yml:/codeception.yml
+      - ./apache2/.htpasswd:/etc/apache2/.htpasswd:ro
+      - ./apache2/apache2.conf:/etc/apache2/apache2.conf:ro

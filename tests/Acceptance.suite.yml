@@ -1,0 +1,13 @@
+actor: AcceptanceTester
+suite_namespace: Tests\Acceptance
+modules:
+  # enable helpers as array
+  enabled:
+    - WebDriver:
+        browser: chrome
+        url: 'http://admin:admin@localhost/'
+        port: 9515
+        capabilities:
+          goog:chromeOptions:
+            args: [ "--headless", "--remote-debugging-pipe", "--no-sandbox"] # Run Chrome in headless mode
+            binary: /usr/bin/google-chrome
